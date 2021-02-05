@@ -1,12 +1,15 @@
-import PropTypes from 'prop-types';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: Helvetica, sans-serif, verdana;
+    font-family: Helvetica;
     font-size: 1em;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+
+  * {
     box-sizing: border-box;
   }
 `;
@@ -27,9 +30,3 @@ export default function App({ Component, pageProps }) {
         </>
     );
 }
-
-App.propTypes = {
-    Component: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.node])
-        .isRequired,
-    pageProps: PropTypes.objectOf(PropTypes.any).isRequired
-};
