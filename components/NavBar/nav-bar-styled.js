@@ -5,7 +5,7 @@ export const Container = styled.ul`
     margin: 0;
     padding: 0;
     width: 100vw;
-    background-color: #007cba;
+    background-color: ${(props) => props.theme.colors.lightBlue};
 
     a {
         color: #fff;
@@ -20,5 +20,5 @@ export const Container = styled.ul`
 export const List = styled.li`
     display: inline-block;
     padding: 1.25rem 3rem;
-    background-color: ${(props) => (props.active ? '#006ba1' : '')};
+    background-color: ${(props) => (props.active ? props.theme.colors.navy : '')};
 `;

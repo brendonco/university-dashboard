@@ -1,8 +1,8 @@
 import Layout from '../../components/Layout';
 
-const downloadTxtFile = () => {
+const downloadJSONFile = () => {
     const element = document.createElement('a');
-    const file = new Blob([document.getElementById('input').value], {
+    const file = new Blob([document.getElementById('email').value], {
         type: 'application/json;charset=utf-8'
     });
     element.href = URL.createObjectURL(file);
@@ -13,9 +13,8 @@ const downloadTxtFile = () => {
 
 const Newsletter = () => (
     <Layout>
-        <h2>Newsletter</h2>
-        <input id="input" />
-        <button onClick={downloadTxtFile}>Download</button>
+        <input id="email" placeholder="Email address" />
+        <button onClick={downloadJSONFile}>Download</button>
     </Layout>
 );
 

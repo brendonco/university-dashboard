@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 
 import App from '../pages/newsletter';
+import { render } from './test-utils';
 
 jest.mock('next/router', () => ({
     useRouter() {
@@ -21,8 +22,9 @@ jest.mock('next/router', () => ({
 }));
 
 describe('App', () => {
-    it('renders Newsletter without crashing', () => {
+    test('renders Newsletter without crashing', () => {
         render(<App />);
-        expect(screen.getByRole('heading', { name: 'Newsletter' })).toBeInTheDocument();
+
+        expect(screen.getByPlaceholderText(/email address/i)).toBeInTheDocument();
     });
 });

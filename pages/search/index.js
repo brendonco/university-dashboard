@@ -35,6 +35,7 @@ const Search = () => {
         <Layout>
             <input
                 placeholder="Search University"
+                aria-label="search-uni-input"
                 onChange={(e) => setSearchValue(e.target.value)}
             />
             {isSearching && <TraceSpinner />}

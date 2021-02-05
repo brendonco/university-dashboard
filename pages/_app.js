@@ -1,4 +1,7 @@
+import PropTypes from 'prop-types';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+
+import theme from '../assets/default-theme';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -14,12 +17,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const theme = {
-    colors: {
-        primary: '#000'
-    }
-};
-
 export default function App({ Component, pageProps }) {
     return (
         <>
@@ -30,3 +27,13 @@ export default function App({ Component, pageProps }) {
         </>
     );
 }
+
+App.defaultProps = {
+    Component: null,
+    pageProps: {}
+};
+
+App.propTypes = {
+    Component: PropTypes.oneOfType([PropTypes.element, PropTypes.func, PropTypes.node]),
+    pageProps: PropTypes.objectOf(PropTypes.any)
+};

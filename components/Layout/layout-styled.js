@@ -22,20 +22,19 @@ export const Main = styled.main`
         top: 2em;
         text-align: center;
         font: inherit;
-        border: 6px solid #a3d8d6;
+        border: ${(props) => `6px solid ${props.theme.colors.lightGreen}`};
         padding: 0.8125em 0.75em;
         font-size: 1em;
-        box-shadow: 0 1px 1px #ddd;
+        box-shadow: ${(props) => `0 1px 1px ${props.theme.colors.lightGrey}`};
         width: 24em;
         outline: none;
-        display: block;
-        color: #788585;
+        color: ${(props) => props.theme.colors.secondary};
         margin: 0 auto 20px;
     }
 
     button {
         position: absolute;
-        top: 6em;
+        top: 5em;
         margin: 1.875em;
         font-size: 1em;
         height: 2em;
@@ -43,7 +42,7 @@ export const Main = styled.main`
         border-radius: 10px;
         border: none;
         box-shadow: 1px 1px 0px 2px rgba (0, 0, 0, 0.3);
-        background: #a3d8d6;
+        background: ${(props) => props.theme.colors.lightGreen};
         cursor: pointer;
     }
 `;

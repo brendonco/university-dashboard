@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 
 import App from '../pages/index';
+import { render } from './test-utils';
 
 jest.mock('next/router', () => ({
     useRouter() {
@@ -21,7 +22,7 @@ jest.mock('next/router', () => ({
 }));
 
 describe('App', () => {
-    it('renders Home without crashing', () => {
+    test('renders Home without crashing', () => {
         render(<App />);
         expect(
             screen.getByRole('heading', { name: 'Welcome to University Dashboard' })
