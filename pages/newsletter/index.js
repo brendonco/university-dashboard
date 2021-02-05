@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 
-const downloadJSONFile = () => {
+export const downloadJSONFile = () => {
     const element = document.createElement('a');
     const file = new Blob([document.getElementById('email').value], {
         type: 'application/json;charset=utf-8'
@@ -9,6 +9,7 @@ const downloadJSONFile = () => {
     element.download = 'users.json';
     document.body.appendChild(element);
     element.click();
+    document.body.removeChild(element);
 };
 
 const Newsletter = () => (
