@@ -10,7 +10,7 @@ const AllTheProviders = ({ children }) => {
 };
 
 AllTheProviders.propTypes = {
-    children: PropTypes.oneOf([PropTypes.func, PropTypes.element, PropTypes.node]).isRequired
+    children: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.node]).isRequired
 };
 
 const customRender = (ui, options) => render(ui, { wrapper: AllTheProviders, ...options });
