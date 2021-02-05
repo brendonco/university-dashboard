@@ -7,6 +7,11 @@ import { Container, List } from './nav-bar-styled';
 
 const menus = [
     {
+        id: 'home',
+        value: 'Home',
+        route: '/'
+    },
+    {
         id: 'search',
         value: 'Search',
         route: '/search'
@@ -15,11 +20,6 @@ const menus = [
         id: 'newsletter',
         value: 'Newsletter',
         route: '/newsletter'
-    },
-    {
-        id: 'universities',
-        value: 'Universities',
-        route: '/dashboard/universities'
     }
 ];
 

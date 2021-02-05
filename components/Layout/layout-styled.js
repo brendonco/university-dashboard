@@ -23,13 +23,27 @@ export const Main = styled.main`
         text-align: center;
         font: inherit;
         border: 6px solid #a3d8d6;
-        padding: 13px 12px;
-        font-size: 15px;
+        padding: 0.8125em 0.75em;
+        font-size: 1em;
         box-shadow: 0 1px 1px #ddd;
-        width: 384px;
+        width: 24em;
         outline: none;
         display: block;
         color: #788585;
         margin: 0 auto 20px;
+    }
+
+    button {
+        position: absolute;
+        top: 6em;
+        margin: 1.875em;
+        font-size: 1em;
+        height: 2em;
+        width: 15.625em;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 1px 1px 0px 2px rgba (0, 0, 0, 0.3);
+        background: #a3d8d6;
+        cursor: pointer;
     }
 `;

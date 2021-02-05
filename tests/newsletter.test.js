@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 
-import App from '../pages/index';
+import App from '../pages/newsletter';
 
 jest.mock('next/router', () => ({
     useRouter() {
         return {
-            route: '/',
+            route: '/newsletter',
             pathname: '',
             query: '',
             asPath: ''
@@ -14,17 +14,15 @@ jest.mock('next/router', () => ({
     withRouter: (component) => {
         component.defaultProps = {
             ...component.defaultProps,
-            router: { pathname: '/' }
+            router: { pathname: '/newsletter' }
         };
         return component;
     }
 }));
 
 describe('App', () => {
-    it('renders Home without crashing', () => {
+    it('renders Newsletter without crashing', () => {
         render(<App />);
-        expect(
-            screen.getByRole('heading', { name: 'Welcome to University Dashboard' })
-        ).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: 'Newsletter' })).toBeInTheDocument();
     });
 });

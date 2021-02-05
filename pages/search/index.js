@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { Card, Grid } from '../../components/Card';
 import Layout from '../../components/Layout';
@@ -52,16 +52,19 @@ const Search = () => {
                             <span>
                                 <img
                                     alt={result.alpha_two_code}
-                                    src={`https://www.countryflags.io/${result.alpha_two_code.toLowerCase()}/flat/64.png`}
+                                    src={`https://www.countryflags.io/${result.alpha_two_code.toLowerCase()}/shiny/64.png`}
                                 />
                                 {` ${result.country}`}
                             </span>
                             {result.web_pages.length > 0 && (
-                                <ul>
+                                <div>
                                     {result.web_pages.map((page) => (
-                                        <li key={generateKey(`${page}_${domain}`)}>{page}</li>
+                                        <Fragment key={generateKey(`${page}_${domain}`)}>
+                                            <img alt={result.alpha_two_code} src="/www.svg" />
+                                            <span>{` ${page}`}</span>
+                                        </Fragment>
                                     ))}
-                                </ul>
+                                </div>
                             )}
                         </Card>
                     );

@@ -7,9 +7,7 @@ import Layout from '../components/Layout';
 export default function Home() {
     return (
         <Layout>
-            <Link href="/">
-                <a>Landing Page</a>
-            </Link>
+            <h1>Welcome to University Dashboard</h1>
         </Layout>
     );
 }

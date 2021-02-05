@@ -13,6 +13,7 @@ const downloadTxtFile = () => {
 
 const Newsletter = () => (
     <Layout>
+        <h2>Newsletter</h2>
         <input id="input" />
         <button onClick={downloadTxtFile}>Download</button>
     </Layout>
