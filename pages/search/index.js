@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Card, Grid } from '../../components/Card';
 import Layout from '../../components/Layout';
+import TraceSpinner from '../../components/TraceSpinner';
 import { fetchQuery } from '../../utils/fetchQuery';
 import { generateKey } from '../../utils/keyGenerator';
 import useDebounce from '../../utils/useDebounce';
@@ -36,8 +37,8 @@ const Search = () => {
                 placeholder="Search University"
                 onChange={(e) => setSearchValue(e.target.value)}
             />
-            {isSearching && 'Searching in-progress...'}
-            {results.length === 0 && 'No Content'}
+            {isSearching && <TraceSpinner />}
+            {!isSearching && results.length === 0 && 'No Content'}
             <Grid>
                 {results.map((result, idx) => {
                     const [domain] = result.domains;
