@@ -10,6 +10,7 @@
 ## Pages
 - Search - For searching universities
 - Newsletter - For dumping user input into a json file
+- Home - Display Welcome page
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on
@@ -37,6 +38,7 @@ Visit http://localhost:3000 to view your application.
 
 ![image](https://user-images.githubusercontent.com/6521691/107056379-4071de80-680d-11eb-83b8-63530fd83501.png)
 
+Alternatively visit live at http://university-dashboard.brendonco.vercel.app/
 
 ## Running the tests
 ```npm run test```
