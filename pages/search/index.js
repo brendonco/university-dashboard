@@ -39,7 +39,7 @@ const Search = () => {
                 onChange={(e) => setSearchValue(e.target.value)}
             />
             {isSearching && <TraceSpinner />}
-            {!isSearching && results.length === 0 && 'No Content'}
+            {!isSearching && results.length === 0 && <p>No Content</p>}
             <Grid>
                 {results.map((result, idx) => {
                     const [domain] = result.domains;

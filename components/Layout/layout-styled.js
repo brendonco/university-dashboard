@@ -10,16 +10,14 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.main`
-    position: relative;
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin: 0 1em;
 
     input {
-        position: absolute;
-        top: 2em;
+        margin: 2em 0 0;
         text-align: center;
         font: inherit;
         border: ${(props) => `6px solid ${props.theme.colors.lightGreen}`};
@@ -29,14 +27,11 @@ export const Main = styled.main`
         width: 24em;
         outline: none;
         color: ${(props) => props.theme.colors.secondary};
-        margin: 0 auto 20px;
     }
 
     button {
-        position: absolute;
-        top: 5em;
-        margin: 1.875em;
         font-size: 1em;
+        margin: 1em 0 0;
         height: 2em;
         width: 15.625em;
         border-radius: 10px;

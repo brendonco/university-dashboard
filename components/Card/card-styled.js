@@ -3,23 +3,20 @@ import styled from 'styled-components';
 export const Grid = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 
-    max-width: 800px;
-    margin-top: 6rem;
-
-    @media (max-width: 600px) {
+    @media (max-width: 730px) {
         width: 100%;
         flex-direction: column;
     }
 `;
 
 export const CardLayout = styled.div`
+    width: 100%;
     height: 200px;
     margin: 1rem;
-    flex: 1;
-    flex-basis: 45%;
+    flex: 1 1 33.33%;
     padding: 1.5rem;
     text-align: left;
     color: inherit;

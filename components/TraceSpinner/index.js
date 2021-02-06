@@ -87,6 +87,7 @@ const Wrapper = styled.div`
     width: ${(props) => `${props.size}${props.sizeUnit}`};
     height: ${(props) => `${props.size}${props.sizeUnit}`};
     transform: rotate(45deg);
+    margin: 1em 0 0;
 `;
 
 const Ball = styled.div`
